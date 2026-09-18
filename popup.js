@@ -1,6 +1,5 @@
 const btn = document.getElementById('toggleBtn');
 
-// Check current state on open
 chrome.storage.local.get(['chaosActive'], (result) => {
   if (result.chaosActive) {
     btn.textContent = "DEACTIVATE";
@@ -8,7 +7,6 @@ chrome.storage.local.get(['chaosActive'], (result) => {
   }
 });
 
-// Toggle state on click
 btn.addEventListener('click', () => {
   chrome.storage.local.get(['chaosActive'], (result) => {
     const newState = !result.chaosActive;
@@ -19,9 +17,11 @@ btn.addEventListener('click', () => {
       } else {
         btn.classList.remove('active');
       }
-      // Reload current tab to apply CSS changes
+      
       chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-        if (tabs[0]) chrome.tabs.reload(tabs[0].id);
+        if (tabs[0]) {
+          chrome.tabs.reload(tabs[0].id);
+        }
       });
     });
   });
