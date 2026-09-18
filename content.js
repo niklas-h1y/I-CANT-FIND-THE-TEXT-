@@ -3,11 +3,20 @@ chrome.storage.local.get(['chaosActive'], (result) => {
     const style = document.createElement('style');
     style.textContent = `
       html {
-        transform: scale(10) !important;
+        /* Scale up 20x from the top-left corner */
+        transform: scale(20) !important;
         transform-origin: top left !important;
-        width: 10% !important;
-        height: 10% !important;
-        overflow: auto !important;
+        
+        /* Force the canvas container size to expand so scrollbars appear */
+        width: 2000% !important;
+        height: 2000% !important;
+        
+        /* Explicitly force scrollbars on both axes */
+        overflow: scroll !important;
+      }
+      body {
+        /* Prevents the browser from compressing layouts horizontally */
+        min-width: 100vw !important;
       }
     `;
     document.documentElement.appendChild(style);
