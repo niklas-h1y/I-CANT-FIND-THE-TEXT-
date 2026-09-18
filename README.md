@@ -1,6 +1,6 @@
 # I CANT FIND THE TEXT! 🔍
 
-A chaotic browser extension that forces a 350% layout scale onto every single website, transforming your regular web browsing into an extreme, omnidirectional scrolling maze.
+A chaotic browser extension that forces a **500%** layout scale onto every single website, transforming your regular web browsing into an extreme, omnidirectional scrolling maze.
 
 ## How it Works
 Instead of using standard page zoom, this extension forcefully overrides the HTML canvas scaling, forcing full desktop-responsive sites to expand far past the screen boundaries on both the horizontal and vertical axes.
