@@ -8,8 +8,8 @@ chrome.storage.local.get(['chaosActive'], (result) => {
         transform-origin: top left !important;
         
         /* Force the canvas container size to expand so scrollbars appear */
-        width: 200% !important;
-        height: 200% !important;
+        width: 350% !important;
+        height: 350% !important;
         
         /* Explicitly force scrollbars on both axes */
         overflow: scroll !important;
